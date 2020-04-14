@@ -24,6 +24,6 @@ public class DataHelper extends SQLiteOpenHelper {
     public static String COL_12 = "VehicleColor";
 
     public DataHelper(@Nullable Context context) {
-        super(context,DataBaseName,null,4);
-        SQLiteDatabase db = this.getWritabledatabase();
+        super(context,DataBase_Name,null,1);
+        SQLiteDatabase db = this.getWritableDatabase();
     }
