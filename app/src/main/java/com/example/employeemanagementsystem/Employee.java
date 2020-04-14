@@ -65,4 +65,6 @@ public class Employee extends AppCompatActivity {
         txtrate.setText(tmprate);
     }
 
+    public void set(Intent myIntent, Bundle bundle, TextView txtName, TextView txtAge, TextView txtAIncome, TextView txtOccRate, TextView lblPerformance, TextView txtModel, TextView txtPlate, TextView lblVehicle, TextView txtColor, TextView txtType, String vehicleCategory) {
+    }
 }
