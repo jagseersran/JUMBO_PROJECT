@@ -27,3 +27,6 @@ public class DataHelper extends SQLiteOpenHelper {
         super(context,DataBase_Name,null,1);
         SQLiteDatabase db = this.getWritableDatabase();
     }
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table EmplyeeTable(Name text,AnnualSalary text,EmpId text,EmpType text,EmpPerformance text,VehicleType text,VehicleModel text,VehiclePlate text,VehicleColor text)");
+    }
