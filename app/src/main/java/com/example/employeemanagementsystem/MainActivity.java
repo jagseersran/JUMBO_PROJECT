@@ -237,8 +237,7 @@ public class MainActivity extends AppCompatActivity {
                             {
                                 myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtcno.getText().toString(),Employee.emptype,Vehicle.category,txtsidecar, txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
                             }
-                            manager.get(txtfname,txtlname,txtbyear,txtmsalary,txtorate,txtcno,txtcartype,txtvmodel,txtplateno,txtsidecar);
-                    }
+                        
                     Intent myIntent = new Intent(MainActivity.this,NewActivity.class);
                     myIntent.putExtra("VehicleCategory1",Vehicle.category);
                     if(Employee.emptype == "Tester")
