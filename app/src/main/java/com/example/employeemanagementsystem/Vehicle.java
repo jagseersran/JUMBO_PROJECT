@@ -39,8 +39,8 @@ public class Vehicle extends Employee {
     public void activity_store(Intent intent)
     {
         intent.putExtra("Model",make);
-        intent.putExtra("Plate",plate);
         intent.putExtra("Category","Employee has a ".concat(" ".concat(category)));
+        intent.putExtra("Plate",plate);
         intent.putExtra("Color",color);
     }
     public void set(Intent intent, Bundle bundle, TextView txtmodel,TextView txtplate,TextView txtcategory,TextView txtcolor)
