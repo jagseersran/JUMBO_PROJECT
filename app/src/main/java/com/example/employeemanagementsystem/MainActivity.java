@@ -239,4 +239,25 @@ public class MainActivity extends AppCompatActivity {
                             }
                             manager.get(txtfname,txtlname,txtbyear,txtmsalary,txtorate,txtcno,txtcartype,txtvmodel,txtplateno,txtsidecar);
                     }
+                    Intent myIntent = new Intent(MainActivity.this,NewActivity.class);
+                    myIntent.putExtra("VehicleCategory1",Vehicle.category);
+                    if(Employee.emptype == "Tester")
+                    {
+                        tester.activity_store(myIntent);
+                    }
+                    else if(Employee.emptype == "Programmer")
+                    {
+                        programmer.activity_store(myIntent);
+                    }
+                    else if(Employee.emptype == "Manager")
+                    {
+                        manager.activity_store(myIntent);
+                    }
+                    startActivity(myIntent);
+                }
+            }
+        });
+    }
+}
+
 
