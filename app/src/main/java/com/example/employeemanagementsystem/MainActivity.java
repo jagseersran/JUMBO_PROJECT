@@ -144,4 +144,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-            }
+        final Spinner spinner1 = findViewById(R.id.spinnerVColor);
+        ArrayList<String> arrayList1 = new ArrayList<>();
+        arrayList1.add("Choose color");
+        arrayList1.add("RED");
+        arrayList1.add("GREEN");
+        arrayList1.add("YELLOW");
+        arrayList1.add("BLACK");
+        arrayList1.add("PURPLE");
+        arrayList1.add("ORANGE");
+        arrayList1.add("PINK");
+        arrayList1.add("BROWN");
+        arrayList1.add("WHITE");
+        arrayList1.add("GREY");
+            
