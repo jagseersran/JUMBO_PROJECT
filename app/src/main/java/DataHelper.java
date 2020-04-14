@@ -53,6 +53,15 @@ public class DataHelper extends SQLiteOpenHelper {
         contentValues.put("VehiclePlate",vehicleplate);
         contentValues.put("VehicleColor",vehiclecolor);
 
-
+        long result = db.insert("EmployeeTable",null,contentValues);
+        if(result == -1)
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
 
 }
