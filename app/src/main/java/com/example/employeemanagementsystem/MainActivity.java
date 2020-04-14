@@ -157,4 +157,13 @@ public class MainActivity extends AppCompatActivity {
         arrayList1.add("BROWN");
         arrayList1.add("WHITE");
         arrayList1.add("GREY");
-            
+        ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, arrayList1);
+        arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner1.setAdapter(arrayAdapter1);
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+            {
+                Vcolor = parent.getItemAtPosition(position).toString();
+                Vehicle.color = Vcolor;
+            }
