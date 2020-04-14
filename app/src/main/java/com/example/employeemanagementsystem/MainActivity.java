@@ -187,5 +187,56 @@ public class MainActivity extends AppCompatActivity {
             EditText txtvmodel = findViewById(R.id.txtVModel);
             EditText txtplateno = findViewById(R.id.txtPlateNo);
             EditText txtempId = findViewById(R.id.txtEId);
+            @Override
+            public void onClick(View v) {
 
+                if(Integer.parseInt(txtbyear.getText().toString())<1900 || Integer.parseInt(txtbyear.getText().toString())>Calendar.getInstance().get(Calendar.YEAR))
+                {
+                    Toast.makeText(MainActivity.this, "Birth Year Should be Greater Than 1900 And Less than Equal to Current Year", Toast.LENGTH_SHORT).show();
+                    txtbyear.setText("");
+                    Toast.makeText(MainActivity.this, "Please Enter Birth Year Again between(1900 and "+Calendar.getInstance().get(Calendar.YEAR)+")", Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.parseInt(txtorate.getText().toString())>100 || Integer.parseInt(txtorate.getText().toString())<0)
+                {
+                    Toast.makeText(MainActivity.this, "Occupation Rate Should be Greater Than 0 And Less than Equal to 100", Toast.LENGTH_SHORT).show();
+                    txtorate.setText("");
+                    Toast.makeText(MainActivity.this, "Please Enter Occupation Rate Again between(0 and 100)", Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.parseInt(txtbyear.getText().toString())>1900 || Integer.parseInt(txtbyear.getText().toString())<=Calendar.getInstance().get(Calendar.YEAR) && Integer.parseInt(txtorate.getText().toString())<=100 || Integer.parseInt(txtorate.getText().toString())>0)
+                {
+                    switch (Employee.emptype)
+                    {
+                        case "Tester":
+                            if(Vehicle.category.equals("Car"))
+                            {
+                                myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtbno.getText().toString(),Employee.emptype,Vehicle.category,txtcartype.getText().toString(), txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
+                            }
+                            else if(Vehicle.category.equals("Motor Cycle"))
+                            {
+                                myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtbno.getText().toString(),Employee.emptype,Vehicle.category,txtsidecar, txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
+                            }
+                            tester.get(txtfname,txtlname,txtbyear,txtmsalary,txtorate,txtbno,txtcartype,txtvmodel,txtplateno,txtsidecar);
+                            break;
+                        case "Programmer":
+                            if(Vehicle.category.equals("Car"))
+                            {
+                                myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtpno.getText().toString(),Employee.emptype,Vehicle.category,txtcartype.getText().toString(), txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
+                            }
+                            else if(Vehicle.category.equals("Motor Cycle"))
+                            {
+                                myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtpno.getText().toString(),Employee.emptype,Vehicle.category,txtsidecar, txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
+                            }
+                            programmer.get(txtfname,txtlname,txtbyear,txtmsalary,txtorate,txtpno,txtcartype,txtvmodel,txtplateno,txtsidecar);
+                            break;
+                        case "Manager":
+                            if(Vehicle.category.equals("Car"))
+                            {
+                                myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtcno.getText().toString(),Employee.emptype,Vehicle.category,txtcartype.getText().toString(), txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
+                            }
+                            else if(Vehicle.category.equals("Motor Cycle"))
+                            {
+                                myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtcno.getText().toString(),Employee.emptype,Vehicle.category,txtsidecar, txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
+                            }
+                            manager.get(txtfname,txtlname,txtbyear,txtmsalary,txtorate,txtcno,txtcartype,txtvmodel,txtplateno,txtsidecar);
+                    }
 
