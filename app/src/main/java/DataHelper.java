@@ -23,18 +23,25 @@ public class DataHelper extends SQLiteOpenHelper {
     public static String COL_11 = "VehiclePlate";
     public static String COL_12 = "VehicleColor";
 
+
+
+
     public DataHelper(@Nullable Context context) {
         super(context,DataBase_Name,null,1);
         SQLiteDatabase db = this.getWritableDatabase();
     }
+
+    @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table EmplyeeTable(Name text,Age Text,AnnualSalary text,Rate text,EmpId text,EmpType text,EmpPerformance text,VehicleType text,VTypeType text,VehicleModel text,VehiclePlate text,VehicleColor text)");
     }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("Drop table if exists EmployeeTable");
         onCreate(db);
     }
+
     public boolean insertData(String name,String age,String annualsalary , String rate,String empid,String emptype,String empperformance,String vehicletype,String vtypetype,String vehiclemodel,String vehicleplate,String vehiclecolor)
     {
         SQLiteDatabase db = this.getWritableDatabase();
