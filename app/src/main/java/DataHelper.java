@@ -40,6 +40,13 @@ public class DataHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
+        contentValues.put("Name",name);
+        contentValues.put("Age",age);
+        contentValues.put("EmpID",empid);
+        contentValues.put("EmpType",emptype);
+        contentValues.put("EmpPerformance",empperformance);
+        contentValues.put("VehicleType",vehicletype);
+        contentValues.put("VehicleColor",vehiclecolor);
 
 
 }
