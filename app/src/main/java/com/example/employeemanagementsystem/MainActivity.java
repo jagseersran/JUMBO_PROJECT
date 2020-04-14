@@ -30,14 +30,16 @@ public class MainActivity extends AppCompatActivity {
     String txtsidecar = new String();
     String Vcategory = new String();
     String Vcolor = new String();
-    com.example.employeemanagementsystem.DataHelper myDB ;
+    DataHelper myDB ;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myDB = new com.example.employeemanagementsystem.DataHelper(this);
+        myDB = new DataHelper(this);
+
+        Intent intent = getIntent();
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("Choose type");
         arrayList.add("Manager");
