@@ -21,3 +21,12 @@
         android:text=""
         android:textSize="20dp"
         />
+    <TextView
+        android:id="@+id/lblAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblName"
+        android:layout_marginLeft="10dp"
+        android:text="Age:"
+        android:textSize="20dp"
+        />
