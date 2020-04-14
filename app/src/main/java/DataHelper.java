@@ -35,3 +35,11 @@ public class DataHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists EmployeeTable");
         onCreate(db);
     }
+    public boolean insertData(String name,String age,String annualsalary ,String empid,String emptype,String empperformance,String vehicletype,String vtypetype,String vehiclemodel,String vehicleplate,String vehiclecolor)
+    {
+        SQLiteDatabase db = this.getWritableDatabase()
+        ContentValues contentValues = new ContentValues();
+
+
+
+}
