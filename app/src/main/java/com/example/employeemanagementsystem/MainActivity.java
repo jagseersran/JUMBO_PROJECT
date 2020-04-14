@@ -123,5 +123,25 @@ public class MainActivity extends AppCompatActivity {
                     Vcategory = rb.getText().toString();
                 }
                 Vehicle.category = Vcategory;
+                Log.d("Vehicle Color",Vehicle.color);
+                Log.d("Vehicle Category",Vehicle.category);
+                Log.d("Employee Type",Employee.emptype);
+            }
+        });
 
+        grpbxSCar.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rdobtnYes)
+                {
+                    RadioButton rb = (RadioButton) findViewById(checkedId);
+                    txtsidecar = rb.getText().toString();
+                }
+                else if(checkedId == R.id.rdobtnNo)
+                {
+                    RadioButton rb = (RadioButton) findViewById(checkedId);
+                    txtsidecar = rb.getText().toString();
+                }
+            }
+        });
             }
