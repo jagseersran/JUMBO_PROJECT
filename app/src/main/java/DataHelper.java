@@ -42,6 +42,8 @@ public class DataHelper extends SQLiteOpenHelper {
 
         contentValues.put("Name",name);
         contentValues.put("Age",age);
+        contentValues.put("AnnualSalary",annualsalary);
+        contentValues.put("Rate",rate);
         contentValues.put("EmpID",empid);
         contentValues.put("EmpType",emptype);
         contentValues.put("EmpPerformance",empperformance);
@@ -50,6 +52,7 @@ public class DataHelper extends SQLiteOpenHelper {
         contentValues.put("VehicleModel",vehiclemodel);
         contentValues.put("VehiclePlate",vehicleplate);
         contentValues.put("VehicleColor",vehiclecolor);
+
 
 
 }
