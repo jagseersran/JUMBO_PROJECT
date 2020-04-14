@@ -31,7 +31,7 @@ public class DataHelper extends SQLiteOpenHelper {
         db.execSQL("create table EmplyeeTable(Name text,Age Text,AnnualSalary text,Rate text,EmpId text,EmpType text,EmpPerformance text,VehicleType text,VTypeType text,VehicleModel text,VehiclePlate text,VehicleColor text)");
     }
     @Override
-    public void onUpgrade(SQLiteDatabase db, int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("Drop table if exists EmployeeTable");
-
+        onCreate(db);
     }
