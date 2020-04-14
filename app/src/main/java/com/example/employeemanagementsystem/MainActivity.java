@@ -88,4 +88,40 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Employee.emptype = tutorialsName;
             }
+            @Override
+            public void onNothingSelected(AdapterView <?> parent) {
+            }
+        });
+
+        final RadioGroup grpbxVehicle = findViewById(R.id.rdogrpVType);
+        final RadioGroup grpbxSCar = findViewById(R.id.rdogrpSideCar);
+        final TextView lblSideCar = findViewById(R.id.lblSideCar);
+        final TextView lblCarType = findViewById(R.id.lblCarType);
+        final EditText txtCType = findViewById((R.id.txtCarType));
+
+
+        grpbxVehicle.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rdobtnCar)
+                {
+                    grpbxSCar.setVisibility(View.GONE);
+                    lblSideCar.setVisibility(View.GONE);
+                    lblCarType.setVisibility(View.VISIBLE);
+                    txtCType.setVisibility(View.VISIBLE);
+                    RadioButton rb = (RadioButton) findViewById(checkedId);
+                    Vcategory = rb.getText().toString();
+
+                }
+                else if(checkedId == R.id.rdobtnMCycle)
+                {
+                    txtCType.setVisibility(View.GONE);
+                    lblCarType.setVisibility(View.GONE);
+                    lblSideCar.setVisibility(View.VISIBLE);
+                    grpbxSCar.setVisibility(View.VISIBLE);
+                    RadioButton rb = (RadioButton) findViewById(checkedId);
+                    Vcategory = rb.getText().toString();
+                }
+                Vehicle.category = Vcategory;
+
             }
