@@ -30,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
     String txtsidecar = new String();
     String Vcategory = new String();
     String Vcolor = new String();
-    DataHelper myDB ;
+    com.example.employeemanagementsystem.DataHelper myDB ;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myDB = new DataHelper(this);
+        myDB = new com.example.employeemanagementsystem.DataHelper(this);
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("Choose type");
         arrayList.add("Manager");
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 final EditText txtCNo = findViewById(R.id.txtCNo);
                 final TextView lblProjNo = findViewById(R.id.lblPNo);
                 final EditText txtProjNo = findViewById(R.id.txtPNo);
+
                 if(tutorialsName == "Programmer")
                 {
                     lblBNo.setVisibility(View.GONE);
@@ -123,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                     Vcategory = rb.getText().toString();
                 }
                 Vehicle.category = Vcategory;
+
                 Log.d("Vehicle Color",Vehicle.color);
                 Log.d("Vehicle Category",Vehicle.category);
                 Log.d("Employee Type",Employee.emptype);
@@ -144,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
         final Spinner spinner1 = findViewById(R.id.spinnerVColor);
         ArrayList<String> arrayList1 = new ArrayList<>();
         arrayList1.add("Choose color");
@@ -162,18 +168,20 @@ public class MainActivity extends AppCompatActivity {
         spinner1.setAdapter(arrayAdapter1);
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Vcolor = parent.getItemAtPosition(position).toString();
                 Vehicle.color = Vcolor;
             }
+
             @Override
             public void onNothingSelected(AdapterView <?> parent) {
             }
         });
 
+
         final Button btnReg = findViewById(R.id.btnReg);
         btnReg.setOnClickListener(new View.OnClickListener() {
+
 
             EditText txtfname = findViewById(R.id.txtfName);
             EditText txtlname = findViewById(R.id.txtlName);
@@ -187,6 +195,8 @@ public class MainActivity extends AppCompatActivity {
             EditText txtvmodel = findViewById(R.id.txtVModel);
             EditText txtplateno = findViewById(R.id.txtPlateNo);
             EditText txtempId = findViewById(R.id.txtEId);
+
+
             @Override
             public void onClick(View v) {
 
@@ -237,7 +247,8 @@ public class MainActivity extends AppCompatActivity {
                             {
                                 myDB.insertData(Employee.name,String.valueOf(Employee.age),String.valueOf(Employee.annualsalary),txtorate.getText().toString(),txtempId.getText().toString(),txtcno.getText().toString(),Employee.emptype,Vehicle.category,txtsidecar, txtvmodel.getText().toString(),txtplateno.getText().toString(),Vehicle.color);
                             }
-                        
+                            manager.get(txtfname,txtlname,txtbyear,txtmsalary,txtorate,txtcno,txtcartype,txtvmodel,txtplateno,txtsidecar);
+                    }
                     Intent myIntent = new Intent(MainActivity.this,NewActivity.class);
                     myIntent.putExtra("VehicleCategory1",Vehicle.category);
                     if(Employee.emptype == "Tester")
@@ -258,5 +269,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
-
