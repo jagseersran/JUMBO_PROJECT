@@ -126,4 +126,16 @@
         android:text="Type:"
         android:textSize="20dp"
         />
+    <TextView
+        android:id="@+id/txtType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblColor"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblType"
+        android:text=""
+        android:textSize="20dp"
+        />
+    
 
