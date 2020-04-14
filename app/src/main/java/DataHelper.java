@@ -56,11 +56,11 @@ public class DataHelper extends SQLiteOpenHelper {
         long result = db.insert("EmployeeTable",null,contentValues);
         if(result == -1)
         {
-            return false
+            return false;
         }
         else
         {
-            return true
+            return true;
         }
     }
 
