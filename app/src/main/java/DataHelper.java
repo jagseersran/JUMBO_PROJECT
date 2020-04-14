@@ -35,3 +35,33 @@ public class DataHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists EmployeeTable");
         onCreate(db);
     }
+    public boolean insertData(String name,String age,String annualsalary , String rate,String empid,String emptype,String empperformance,String vehicletype,String vtypetype,String vehiclemodel,String vehicleplate,String vehiclecolor)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("Name",name);
+        contentValues.put("Age",age);
+        contentValues.put("AnnualSalary",annualsalary);
+        contentValues.put("Rate",rate);
+        contentValues.put("EmpID",empid);
+        contentValues.put("EmpType",emptype);
+        contentValues.put("EmpPerformance",empperformance);
+        contentValues.put("VehicleType",vehicletype);
+        contentValues.put("VTypeType",vtypetype);
+        contentValues.put("VehicleModel",vehiclemodel);
+        contentValues.put("VehiclePlate",vehicleplate);
+        contentValues.put("VehicleColor",vehiclecolor);
+
+        long result = db.insert("EmployeeTable",null,contentValues);
+        if(result == -1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+}

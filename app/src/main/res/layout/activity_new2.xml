@@ -147,47 +147,5 @@
         android:text="Occupation Rate:"
         android:textSize="20dp"
         />
-    <TextView
-        android:id="@+id/txtOccRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/lblOccRate"
-        android:layout_below="@+id/lblType"
-        android:text=""
-        android:textSize="20dp"
-        />
-    <TextView
-        android:id="@+id/lblAIncome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@+id/lblOccRate"
-        android:text="Annual Income:"
-        android:textSize="20dp"
-        />
-    <TextView
-        android:id="@+id/txtAIncome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/lblAIncome"
-        android:layout_below="@+id/lblOccRate"
-        android:text=""
-        android:textSize="20dp"
-        />
-    <TextView
-        android:id="@+id/lblPerformance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_below="@+id/lblAIncome"
-        android:text=""
-        android:textSize="20dp"
-        />
-
-
-
-
 
 </LinearLayout>
