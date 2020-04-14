@@ -46,6 +46,9 @@ public class DataHelper extends SQLiteOpenHelper {
         contentValues.put("EmpType",emptype);
         contentValues.put("EmpPerformance",empperformance);
         contentValues.put("VehicleType",vehicletype);
+        contentValues.put("VTypeType",vtypetype);
+        contentValues.put("VehicleModel",vehiclemodel);
+        contentValues.put("VehiclePlate",vehicleplate);
         contentValues.put("VehicleColor",vehiclecolor);
 
 
