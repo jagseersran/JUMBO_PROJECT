@@ -17,8 +17,5 @@ public class DataHelper extends SQLiteOpenHelper {
     public static String COL_5 = "EmpId";
     public static String COL_6 = "EmpType";
     public static String COL_7 = "EmpPerformance";
-    public static String COL_8 = "VehicleType";
-    public static String COL_9 = "VTypeType";
-    public static String COL_10 = "VehicleModel";
     public static String COL_11 = "VehiclePlate";
     public static String COL_12 = "VehicleColor";
