@@ -83,5 +83,38 @@
         android:text="Plate:"
         android:textSize="20dp"
         />
+    <TextView
+        android:id="@+id/txtPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblModel"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblPlate"
+        android:text=""
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/lblColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblPlate"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/lblAge"
+        android:text="Color:"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:id="@+id/txtColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblPlate"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblPlate"
+        android:text=""
+        android:textSize="20dp"
+        />
 
 </LinearLayout>
