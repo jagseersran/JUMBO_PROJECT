@@ -167,3 +167,25 @@ public class MainActivity extends AppCompatActivity {
                 Vcolor = parent.getItemAtPosition(position).toString();
                 Vehicle.color = Vcolor;
             }
+            @Override
+            public void onNothingSelected(AdapterView <?> parent) {
+            }
+        });
+
+        final Button btnReg = findViewById(R.id.btnReg);
+        btnReg.setOnClickListener(new View.OnClickListener() {
+
+            EditText txtfname = findViewById(R.id.txtfName);
+            EditText txtlname = findViewById(R.id.txtlName);
+            EditText txtbyear = findViewById(R.id.txtBYear);
+            EditText txtmsalary = findViewById(R.id.txtMSalary);
+            EditText txtorate = findViewById(R.id.txtORate);
+            EditText txtpno = findViewById(R.id.txtPNo);
+            EditText txtbno =findViewById(R.id.txtBNo);
+            EditText txtcno =findViewById(R.id.txtCNo);
+            EditText txtcartype =findViewById(R.id.txtCarType);
+            EditText txtvmodel = findViewById(R.id.txtVModel);
+            EditText txtplateno = findViewById(R.id.txtPlateNo);
+            EditText txtempId = findViewById(R.id.txtEId);
+
+
