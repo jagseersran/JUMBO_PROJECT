@@ -53,6 +53,7 @@ public class Employee extends AppCompatActivity {
         intent .putExtra("AIncome",String.valueOf(annualsalary));
         intent.putExtra("OccRate",rate);
     }
+
     public void set(Intent intent, Bundle bundle, TextView txtname,TextView txtage,TextView txtaIncome,TextView txtrate)
     {
         String tmpname = bundle.getString("Name");
@@ -63,8 +64,5 @@ public class Employee extends AppCompatActivity {
         txtage.setText(tmpage);
         txtaIncome.setText(tmpannualIncome);
         txtrate.setText(tmprate);
-    }
-
-    public void set(Intent myIntent, Bundle bundle, TextView txtName, TextView txtAge, TextView txtAIncome, TextView txtOccRate, TextView lblPerformance, TextView txtModel, TextView txtPlate, TextView lblVehicle, TextView txtColor, TextView txtType, String vehicleCategory) {
     }
 }

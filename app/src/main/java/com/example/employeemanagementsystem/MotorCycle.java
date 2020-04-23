@@ -16,11 +16,13 @@ public class MotorCycle extends Vehicle {
     {
         sideCar = "";
     }
+
     public void get(EditText txtmodel,EditText txtplateno,String txtsidecar)
     {
         super.get(txtmodel,txtplateno);
         sideCar = txtsidecar;
     }
+
     public void activity_store(Intent intent)
     {
         super.activity_store(intent);
@@ -33,10 +35,12 @@ public class MotorCycle extends Vehicle {
             intent.putExtra("Type","Without Side Car");
         }
     }
+
+
     public void set(Intent intent, Bundle bundle, TextView txtmodel,TextView txtplate,TextView txtcategory,TextView txtcolor,TextView txtsidecar)
     {
         super.set(intent,bundle,txtmodel,txtplate,txtcategory,txtcolor);
-        String tmptype = bundle.getString("TYPE");
+        String tmptype = bundle.getString("Type");
         txtsidecar.setText(tmptype);
     }
 

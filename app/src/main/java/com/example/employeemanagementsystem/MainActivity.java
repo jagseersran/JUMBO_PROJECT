@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDB = new DataHelper(this);
-
-        Intent intent = getIntent();
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("Choose type");
         arrayList.add("Manager");

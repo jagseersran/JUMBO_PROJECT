@@ -20,9 +20,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Vehicle extends Employee {
     public static String make;
     public static String plate;
-    public static String category;
     public static String color;
-
+    public static String category;
 
     Vehicle()
     {
@@ -31,18 +30,21 @@ public class Vehicle extends Employee {
         color = "";
         category = "";
     }
+
     public void get(EditText txtmodel,EditText txtplateno)
     {
         make = txtmodel.getText().toString();
         plate = txtplateno.getText().toString();
     }
+
     public void activity_store(Intent intent)
     {
         intent.putExtra("Model",make);
-        intent.putExtra("Category","Employee has a ".concat(" ".concat(category)));
         intent.putExtra("Plate",plate);
+        intent.putExtra("Category","Employee has a ".concat(" ".concat(category)));
         intent.putExtra("Color",color);
     }
+
     public void set(Intent intent, Bundle bundle, TextView txtmodel,TextView txtplate,TextView txtcategory,TextView txtcolor)
     {
         String tmpmodel = bundle.getString("Model");

@@ -18,7 +18,8 @@ public class Tester extends Employee {
     MotorCycle motorcycle = new MotorCycle();
     private int nbBugs;
 
-    Tester() {
+    Tester()
+    {
         nbBugs = 0;
     }
 
@@ -36,7 +37,6 @@ public class Tester extends Employee {
         nbBugs = Integer.parseInt(txtbno.getText().toString());
     }
 
-
     public void activity_store(Intent intent)
     {
         super.activity_store(intent);
@@ -45,12 +45,18 @@ public class Tester extends Employee {
         intent.putExtra("Performance","He/She has corrected "+nbBugs+" bugs");
     }
 
-    public void set(Intent intent, Bundle bundle, TextView txtname, TextView txtage, TextView txtaIncome, TextView txtrate, TextView txtperformance,TextView txtmodel,TextView txtplate,TextView txtvtype,TextView txtcolor,TextView txttype)
+    public void set(Intent intent, Bundle bundle, TextView txtname, TextView txtage, TextView txtaIncome, TextView txtrate, TextView txtperformance,TextView txtmodel,TextView txtplate,TextView txtvtype,TextView txtcolor,TextView txttype,String VehicleCategory)
     {
         super.set(intent,bundle,txtname,txtage,txtaIncome,txtrate);
-        car.set(intent,bundle,txtmodel,txtplate,txtvtype,txtcolor,txttype);
+        if(VehicleCategory.equals("Car"))
+        {
+            car.set(intent,bundle,txtmodel,txtplate,txtvtype,txtcolor,txttype);
+        }
+        else if(VehicleCategory.equals("Motor Cycle"))
+        {
+            motorcycle.set(intent,bundle,txtmodel,txtplate,txtvtype,txtcolor,txttype);
+        }
         String tempperformance = bundle.getString("Performance");
         txtperformance.setText(tempperformance);
     }
-
 }

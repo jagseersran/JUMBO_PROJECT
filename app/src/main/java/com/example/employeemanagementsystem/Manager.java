@@ -39,14 +39,14 @@ public class Manager extends Employee {
         intent.putExtra("Performance","He/She has bought "+nbClients+" clients");
     }
 
-    public void set(Intent intent, Bundle bundle, TextView txtname, TextView txtage, TextView txtaIncome, TextView txtrate, TextView txtperformance,TextView txtmodel,TextView txtplate,TextView txtvtype,TextView txtcolor,TextView txttype)
+    public void set(Intent intent, Bundle bundle, TextView txtname, TextView txtage, TextView txtaIncome, TextView txtrate, TextView txtperformance,TextView txtvtype,TextView txtmodel,TextView txtplate,TextView txtcolor,TextView txttype,String VehicleCategory)
     {
         super.set(intent,bundle,txtname,txtage,txtaIncome,txtrate);
-        if(Vehicle.category.equals("Car"))
+        if(VehicleCategory.equals("Car"))
         {
             car.set(intent,bundle,txtmodel,txtplate,txtvtype,txtcolor,txttype);
         }
-        else if(Vehicle.category.equals("Motor Cycle"))
+        else if(VehicleCategory.equals("Motor Cycle"))
         {
             motorcycle.set(intent,bundle,txtmodel,txtplate,txtvtype,txtcolor,txttype);
         }
